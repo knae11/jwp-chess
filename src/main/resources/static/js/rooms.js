@@ -26,7 +26,10 @@ function moveToPreviousBoard(event) {
 }
 
 function moveToBoard() {
-    const roomName = prompt('방 이름을 입력해주세요~ :)', 'no name');
+    const roomName = prompt('방 이름을 입력해주세요~ :)', '80글자까지만 입력해주세요~');
+    if(roomName === null){
+        return;
+    }
     apiService.createRoom({roomName})
         .then(response => window.location.href = response.headers.get('Location'))
 }
