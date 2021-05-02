@@ -22,6 +22,9 @@ function drawRooms(datas) {
 
 function moveToPreviousBoard(event) {
     const roomId = event.target.id
+    if(roomId === null){
+        return;
+    }
     location.href = `/rooms/${roomId}`
 }
 
