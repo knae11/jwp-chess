@@ -1,6 +1,6 @@
 export default class ChessService {
     constructor() {
-        this.baseUrl = "./";
+        this.baseUrl = "/";
         this.headers = {
             "Content-Type": "application/json"
         };
