@@ -9,8 +9,8 @@ function drawRooms(datas) {
     let lists = ""
     for (let i in datas) {
         lists +=
-            `<li class="room_item" id=${datas[i].roomId}>
-                <div class="room_info">
+            `<li class="room_item">
+                <div class="room_info" id=${datas[i].roomId}>
                     <strong>Title: ${datas[i].name}</strong> <span>${datas[i].isPlaying ? "진행중" : "종료"}</span>
                 </div>
             </li>`
